@@ -159,20 +159,45 @@ public class Solution {
   // and put your code here.
   }
   
-  void soln19() {
+  void soln19(Object[] objects) {
+    Integer sum = 0;
+    for (int i = 0; i < objects.length; i++ ) {
+      Integer value = Xaction.getValue(objects[i]);
+      if (value != null) {
+        sum += value;
+      }
+      System.out.println(sum);
+    }
   // and put your code here.
 
   }
   
-  void soln20() {
+  void soln20(Xaction[] objects) {
   // and put your code here.
+    Xaction reverse = "";
+    for (int i = 0; i <= objects.length / 2; i++) {
+      reverse = objects[i];
+      objects[i] = objects[objects.length - 1 - i];
+      objects[objects.length - 1 - i] = reverse;
+    }
+    return objects;
+
   }
   
   void soln21() {
   // and put your code here.
+    String table = "";
+    for (int i = 1; i <= 5; i++) {
+      for (int j = 1; j <= 5; j++) {
+        table += String.format("%3d |", (i * j));
+      }
+      table += "\n";
+    }
+    System.out.println(table);
   }
   
   void soln22() {
+    double hypotenuse = Math.sqrt(Math.pow(9, 2) + Math.pow(7, 2));
   // and put your code here.
   }
   
